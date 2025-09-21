@@ -233,7 +233,7 @@ const App = () => {
                 lineHeight: '1.75',
                 marginBottom: '1rem'
               }}>
-                Sóc en Biel Costa, un jove apassionat per la tecnologia i la programació, amb experiència ajudant veïns, Familiars i negocis locals. 
+                Sóc en Biel Costa, un jove apassionat per la tecnologia i la programació, amb experiència ajudant veïns, familiars i negocis locals. 
                 Em dedico a resoldre problemes informàtics de forma ràpida i senzilla, amb un tracte proper i personal.
               </p>
               <p style={{
