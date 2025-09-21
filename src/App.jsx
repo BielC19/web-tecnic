@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import img1 from './assets/fto1.jpeg';
 import img2 from './assets/fto2.jpeg';
 import img3 from './assets/fto3.jpeg';
@@ -7,6 +7,8 @@ import img5 from './assets/fto5.jpeg';
 import img6 from './assets/fto6.jpg';
 
 const App = () => {
+    const [imgError, setImgError] = useState(false);
+    const Imatge = img6; 
   return (
     <div style={{
       minHeight: '100vh',
@@ -82,28 +84,37 @@ const App = () => {
           alignItems: 'center'
         }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            {!imgError ? (
-            <img
-            src={img6}
-            onError={() => setImgError(true)} // Si falla, canvia estat
-            style={{ width: "300px", height: "auto" }}
-            />
-            ) : (
-            <div style={{
-              height: '40px',
-              width: '40px',
-              background: 'linear-gradient(to right, #3b82f6, #10b981)',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontWeight: 'bold',
-              fontSize: '18px'
-            }}>
-              B
-            </div>
-            )}
+      {!imgError ? (
+        <img
+          src={Imatge}
+          alt="Imatge"
+          onError={() => setImgError(true)} // si falla → activa error
+          style={{
+            height: "40px",
+            width: "40px",
+            objectFit: "cover",
+            objectPosition: "100% 24%",
+            borderRadius: "15%"
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            height: "40px",
+            width: "40px",
+            background: "linear-gradient(to right, #3b82f6, #10b981)",
+            borderRadius: "8px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "white",
+            fontWeight: "bold",
+            fontSize: "18px",
+          }}
+        >
+          B
+        </div>
+      )}
             <h1 style={{
               marginLeft: '12px',
               fontSize: '20px',
@@ -178,6 +189,20 @@ const App = () => {
             gap: '3rem',
             textAlign: 'center'
           }}>
+      {!imgError ? (
+        <img
+          src={Imatge}
+          alt="Imatge"
+          onError={() => setImgError(true)} // si falla → activa error
+          style={{
+            height: "256px",
+            width: "256px",
+            objectFit: "cover",
+            objectPosition: "100% 24%",
+            borderRadius: "15%"
+          }}
+        />
+      ) : (
             <div style={{
               width: '256px',
               height: '256px',
@@ -192,6 +217,7 @@ const App = () => {
             }}>
               📷
             </div>
+      )}
             <div style={{ maxWidth: '800px' }}>
               <h2 style={{
                 fontSize: '2rem',
@@ -207,15 +233,15 @@ const App = () => {
                 lineHeight: '1.75',
                 marginBottom: '1rem'
               }}>
-                Sóc en Biel Costa, un jove apassionat per la tecnologia i la programació, amb experiència ajudant veïns, amics i negocis locals. 
-                Em dedico a resoldre problemes informàtics de forma ràpida i senzilla, amb un tracte proper i personalitzat.
+                Sóc en Biel Costa, un jove apassionat per la tecnologia i la programació, amb experiència ajudant veïns, Familiars i negocis locals. 
+                Em dedico a resoldre problemes informàtics de forma ràpida i senzilla, amb un tracte proper i personal.
               </p>
               <p style={{
                 fontSize: '1.125rem',
                 color: '#4b5563',
                 lineHeight: '1.75'
               }}>
-                Entenc que la tecnologia pot ser complicada, per això m'encarrego de fer-la fàcil i accessible per a tothom al nostre poble.
+                Entenc que la tecnologia pot ser complicada, per això m'encarrego de fer-la fàcil i accessible per a tothom.
               </p>
             </div>
           </div>
@@ -256,7 +282,7 @@ const App = () => {
                 icon: "🛠️"
               },
               {
-                title: "Configuració de mòbils i televisions",
+                title: "Configuració de mòbils, ordinadors, televisions, impresores...",
                 description: "Configuro els teus dispositius mòbils, smart TVs i altres aparells perquè els puguis utilitzar sense problemes.",
                 icon: "📱"
               },
@@ -265,20 +291,20 @@ const App = () => {
                 description: "Amplio la cobertura wifi, configuro routers i soluciono problemes de connexió a Internet.",
                 icon: "📶"
               },
+                {
+                  title: "Impressores i còpies de seguretat",
+                  description: "Configuro impressores i et mostro com fer còpies de seguretat dels teus documents importants al teu servidor local.",
+                  icon: "🖨️"
+                },
               {
-                title: "Domòtica i Smart Home",
+                  title: "Suport per negocis",
+                  description: "Serveis de manteniment mensual, configuració de servidors bàsics i suport continuat per a empreses.",
+                  icon: "🏢"
+              },
+              {
+                title: "Domòtica",
                 description: "T'ajudo a configurar bombetes intel·ligents, assistents de veu i altres dispositius domòtics.",
-                icon: "🏠"
-              },
-              {
-                title: "Impressores i còpies de seguretat",
-                description: "Configuro impressores i et mostro com fer còpies de seguretat dels teus documents importants.",
-                icon: "🖨️"
-              },
-              {
-                title: "Suport per negocis",
-                description: "Serveis de manteniment mensual, configuració de servidors bàsics i suport continuat per a empreses locals.",
-                icon: "🏢"
+                icon: "🏠",
               }
             ].map((service, index) => (
               <div key={index} className="service-card" style={{
@@ -434,19 +460,19 @@ const App = () => {
             {[
               {
                 title: "Servei proper",
-                description: "Sóc del poble i entenc les teves necessitats locals."
+                description: "Sóc un jove que ajudat semper a casa i entenc les teves necessitats locals."
               },
               {
                 title: "Preus justos",
-                description: "Transparència total en els preus, sense sorpreses."
+                description: "Transparència total en els preus, sense sorpreses i mes barats que la majoria de técnics."
               },
               {
                 title: "Rapidesa",
-                description: "Disponibilitat ràpida i solucions immediates."
+                description: "Amplia disponibilitat i solucions lo avans possible."
               },
               {
                 title: "Flexibilitat",
-                description: "Suport presencial o a distància segons les teves necessitats."
+                description: "Suport presencial o a distància segons les teves necessitats, sempre que sigui possible."
               }
             ].map((benefit, index) => (
               <div key={index} style={{
@@ -502,7 +528,7 @@ const App = () => {
             gap: '2rem',
             marginBottom: '2rem'
           }}>
-            {[
+            {/*[
               {
                 name: "Maria S.",
                 location: "Veïna del poble",
@@ -557,7 +583,7 @@ const App = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            ))*/}
           </div>
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
             <p style={{ fontStyle: 'italic', color: '#9ca3af' }}>
