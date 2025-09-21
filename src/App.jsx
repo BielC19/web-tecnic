@@ -143,7 +143,7 @@ const App = () => {
             marginBottom: '1.5rem',
             lineHeight: '1.2'
           }}>
-            El tècnic informàtic del teu poble
+            El tècnic informàtic prop teu
           </h1>
           <p style={{
             fontSize: '1.25rem',
