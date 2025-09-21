@@ -1,4 +1,10 @@
 import React from 'react';
+import img1 from './assets/fto1.jpeg';
+import img2 from './assets/fto2.jpeg';
+import img3 from './assets/fto3.jpeg';
+import img4 from './assets/fto4.jpeg';
+import img5 from './assets/fto5.jpeg';
+import img6 from './assets/fto6.jpg';
 
 const App = () => {
   return (
@@ -8,6 +14,9 @@ const App = () => {
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
     }}>
       <style jsx>{`
+      #root {
+          width: 100%;
+      }
         .btn-whatsapp {
           background: #25D366;
           color: white;
@@ -73,6 +82,13 @@ const App = () => {
           alignItems: 'center'
         }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
+            {!imgError ? (
+            <img
+            src={img6}
+            onError={() => setImgError(true)} // Si falla, canvia estat
+            style={{ width: "300px", height: "auto" }}
+            />
+            ) : (
             <div style={{
               height: '40px',
               width: '40px',
@@ -87,6 +103,7 @@ const App = () => {
             }}>
               B
             </div>
+            )}
             <h1 style={{
               marginLeft: '12px',
               fontSize: '20px',
