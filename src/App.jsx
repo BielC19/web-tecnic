@@ -336,9 +336,10 @@ const App = () => {
       </section>
 
       {/* Preus */}
-      <section style={{
+      <section hidden style={{
         padding: '4rem 2rem',
         backgroundColor: 'white'
+        
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h2 style={{
@@ -460,7 +461,7 @@ const App = () => {
             {[
               {
                 title: "Servei proper",
-                description: "Sóc un jove que ajudat semper a casa i entenc les teves necessitats locals."
+                description: "Sóc un jove que ha ajudat semper a casa i entenc les teves necessitats locals."
               },
               {
                 title: "Preus justos",
