@@ -129,8 +129,9 @@ const App = () => {
             }}>
               Biel Costa
             </h1>
-          </div>/*
+          </div>
           <div>
+          <a href="https://bielc19.github.io/web-tecnic/" style={{ marginRight: '8px' }}>
           <img
           src={bCat}
           alt="Imatge"
@@ -143,6 +144,7 @@ const App = () => {
             borderRadius: "15%"
           }}
         />
+          </a>
                   <img
           src={bEsp}
           alt="Imatge"
@@ -167,7 +169,7 @@ const App = () => {
             borderRadius: "15%"
           }}
         />
-          </div>*/
+          </div>
           <nav style={{ display: 'none' }}>
             {/* Hidden on mobile */}
           </nav>
