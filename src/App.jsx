@@ -5,16 +5,16 @@ import img3 from './assets/fto3.jpeg';
 import img4 from './assets/fto4.jpeg';
 import img5 from './assets/fto5.jpeg';
 import img6 from './assets/fto6.jpg';
-import bCat from './assets/banderaCat.png';
-import bEsp from './assets/banderaEsp.png';
-import bEng from './assets/banderaEng.png';
+import bbCat from './assets/banderaCat.png';
+import bbEsp from './assets/banderaEsp.png';
+import bbEng from './assets/banderaEng.png';
 
 const App = () => {
     const [imgError, setImgError] = useState(false);
     const Imatge = img6; 
-    const bCat = bCat;
-    const bEsp = bEsp;
-    const bEng = bEng;
+    const bCat = bbCat;
+    const bEsp = bbEsp;
+    const bEng = bbEng;
   return (
     <div style={{
       minHeight: '100vh',
