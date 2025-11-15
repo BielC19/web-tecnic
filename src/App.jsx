@@ -5,10 +5,16 @@ import img3 from './assets/fto3.jpeg';
 import img4 from './assets/fto4.jpeg';
 import img5 from './assets/fto5.jpeg';
 import img6 from './assets/fto6.jpg';
+import bCat from './assets/banderaCat.png';
+import bEsp from './assets/banderaEsp.png';
+import bEng from './assets/banderaEng.png';
 
 const App = () => {
     const [imgError, setImgError] = useState(false);
     const Imatge = img6; 
+    const bCat = bCat;
+    const bEsp = bEsp;
+    const bEng = bEng;
   return (
     <div style={{
       minHeight: '100vh',
@@ -123,6 +129,44 @@ const App = () => {
             }}>
               Biel Costa
             </h1>
+          </div>
+          <div>
+          <img
+          src={bCat}
+          alt="Imatge"
+          onError={() => setImgError(true)} // si falla → activa error
+          style={{
+            height: "40px",
+            width: "40px",
+            objectFit: "cover",
+            objectPosition: "100% 24%",
+            borderRadius: "15%"
+          }}
+        />
+                  <img
+          src={bEsp}
+          alt="Imatge"
+          onError={() => setImgError(true)} // si falla → activa error
+          style={{
+            height: "40px",
+            width: "40px",
+            objectFit: "cover",
+            objectPosition: "100% 24%",
+            borderRadius: "15%"
+          }}
+        />
+                  <img
+          src={bEng}
+          alt="Imatge"
+          onError={() => setImgError(true)} // si falla → activa error
+          style={{
+            height: "40px",
+            width: "40px",
+            objectFit: "cover",
+            objectPosition: "100% 24%",
+            borderRadius: "15%"
+          }}
+        />
           </div>
           <nav style={{ display: 'none' }}>
             {/* Hidden on mobile */}
