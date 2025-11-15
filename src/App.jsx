@@ -129,7 +129,7 @@ const App = () => {
             }}>
               Biel Costa
             </h1>
-          </div>
+          </div>/*
           <div>
           <img
           src={bCat}
@@ -167,7 +167,7 @@ const App = () => {
             borderRadius: "15%"
           }}
         />
-          </div>
+          </div>*/
           <nav style={{ display: 'none' }}>
             {/* Hidden on mobile */}
           </nav>
