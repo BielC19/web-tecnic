@@ -5,16 +5,11 @@ import img3 from './assets/fto3.jpeg';
 import img4 from './assets/fto4.jpeg';
 import img5 from './assets/fto5.jpeg';
 import img6 from './assets/fto6.jpg';
-import bbCat from './assets/banderaCat.png';
-import bbEsp from './assets/banderaEsp.png';
-import bbEng from './assets/banderaEng.png';
 
 const App = () => {
     const [imgError, setImgError] = useState(false);
     const Imatge = img6; 
-    const bCat = bbCat;
-    const bEsp = bbEsp;
-    const bEng = bbEng;
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -130,46 +125,7 @@ const App = () => {
               Biel Costa
             </h1>
           </div>
-          <div>
-          <a href="https://bielc19.github.io/web-tecnic/" style={{ marginRight: '8px' }}>
-          <img
-          src={bCat}
-          alt="Imatge"
-          onError={() => setImgError(true)} // si falla → activa error
-          style={{
-            height: "40px",
-            width: "40px",
-            objectFit: "cover",
-            objectPosition: "100% 24%",
-            borderRadius: "15%"
-          }}
-        />
-          </a>
-                  <img
-          src={bEsp}
-          alt="Imatge"
-          onError={() => setImgError(true)} // si falla → activa error
-          style={{
-            height: "40px",
-            width: "40px",
-            objectFit: "cover",
-            objectPosition: "100% 24%",
-            borderRadius: "15%"
-          }}
-        />
-                  <img
-          src={bEng}
-          alt="Imatge"
-          onError={() => setImgError(true)} // si falla → activa error
-          style={{
-            height: "40px",
-            width: "40px",
-            objectFit: "cover",
-            objectPosition: "100% 24%",
-            borderRadius: "15%"
-          }}
-        />
-          </div>
+
           <nav style={{ display: 'none' }}>
             {/* Hidden on mobile */}
           </nav>
